@@ -1,24 +1,30 @@
-# Healthcare Admissions Analysis — SQL + Power BI
+# Healthcare Admissions Analysis (SQL + Power BI)
 
-A data analytics and visualization project examining admissions, length of stay, and billing across eight medical conditions in a **synthetic** healthcare dataset of 55,500 admission records. SQL handles cleaning, transformation, and analysis; Power BI delivers the dashboard.
+Which conditions drive the longest stays and the highest billing, and are they the same ones? This project analyzes a synthetic healthcare dataset of 55,500 admission records across eight medical conditions, using SQL for cleaning and analysis and Power BI for the dashboard.
+
+![Admissions overview page](dashboard-overview.png)
+
+![Clinical and financial page](dashboard-clinical.png)
 
 > Demonstration project built on a synthetic dataset. Figures describe patterns within the data and are not real-world clinical findings. Relationships shown are descriptive associations, not causal claims.
 
-## Contents
-- `healthcare_final_cleaning_and_analysis.sql` — cleaning, transformation, and analysis queries
-- `healthcare_analysis_ready_revised.csv` — analysis-ready dataset (55,500 rows)
-- `Healthcare_Admissions_Dashboard.pbix` — Power BI dashboard
-- `Healthcare_Admissions_Final_Report.pdf` — summary, methodology, findings, and recommendations
-- `Healthcare_PowerBI_Development_Report.pdf` — dashboard development notes
-- `Admissions_Overview_Dashboard.png`, `Clinical_Financial_Analysis_Dashboard.png` — dashboard screenshots
-
 ## A few findings
+
 - Length of stay was validated against the admission-to-discharge date calculation across all 55,500 rows, with zero mismatches.
 - The highest-billing condition (Cancer, about $64.5K on average) is not the longest-staying one (Alzheimer's, about 54 days on average), so billing and length of stay rank conditions differently.
 - Average billing rises with age band across the dataset.
 
 ## Tools
-SQL (SQLite via DB Browser), Power BI.
+
+SQL (SQLite via DB Browser) for cleaning, transformation, and analysis. Power BI for the data model, DAX measures, and the dashboard.
+
+## Contents
+
+- `healthcare_analysis.sql` — cleaning, transformation, and analysis queries
+- `dashboard-overview.png`, `dashboard-clinical.png` — dashboard screenshots
+
+The Power BI file and the dataset aren't committed here to keep the repo lean; the SQL and the screenshots reproduce the analysis.
 
 ## Author
+
 Eric Benitez
